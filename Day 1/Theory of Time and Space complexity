@@ -1,1 +1,14 @@
-//theory to be inserted
+Comparison of Time Complexities
+Big O Notation
+O(1)	
+O(log n)	
+O(n)
+O(n log n)	
+O(n^2)
+O(n^3)
+O(2^n)
+O(n!)	
+(increases from top to down)
+
+HOW TO AVOID TLE
+10^8 operation rule - Most of the modern machine can perform 10^8 operation/second.
