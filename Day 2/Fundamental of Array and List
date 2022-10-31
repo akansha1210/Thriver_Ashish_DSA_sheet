@@ -8,4 +8,4 @@ In ArrayList, manipulation is a little bit slower than the LinkedList in Java be
 We can not create an array list of the primitive types, such as int, float, char, etc. It is required to use the required wrapper class in such cases. For example:
 ArrayList<int> al = ArrayList<int>(); // does not work  
 ArrayList<Integer> al = new ArrayList<Integer>(); // works fine  
-Java ArrayList gets initialized by the size. The size is dynamic in the array list, which varies according to the elements getting added or removed from the list.
+Java ArrayList gets initialized by the size. The size is dynamic in the array list, which varies according to the elements getting added or removed from the Arraylist.
