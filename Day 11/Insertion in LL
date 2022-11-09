@@ -24,3 +24,25 @@
         return head;
   
     }
+ //Insert at given position
+ 
+    static void insertAtPosition(Node head, int pos, int data)
+    {
+        Node temp=new Node(data);
+        if(pos==1){
+        temp.next=head;
+        return temp;
+        }
+        Node cur=head;
+        for(int i=1;i<=pos-1 && cur!=null;i++){
+            cur=cur.next;
+        }
+        if(cur==null) {
+            return;
+        }
+        
+        temp.next=cur.next;
+        cur.next=temp;
+        
+        
+     }
