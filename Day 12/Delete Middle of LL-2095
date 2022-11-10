@@ -1,0 +1,14 @@
+   public ListNode deleteMiddle(ListNode head) {
+        if(head.next==null) return null;
+        ListNode fast=head;
+        ListNode slow=head;
+        ListNode prevslow=null;//to keep track of previous node
+        while(fast!=null && fast.next!=null){
+            prevslow=slow;
+            fast=fast.next.next;
+            slow=slow.next;
+        }
+        prevslow.next=prevslow.next.next;
+       
+        return head;
+    }
