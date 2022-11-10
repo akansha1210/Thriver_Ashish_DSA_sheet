@@ -46,3 +46,21 @@
         
         
      }
+//Sorted Insert in LL
+  static Node insertInSorted(Node head, int data)
+    {
+        Node temp=new Node(data);
+        if(head==null) return temp;
+        if(data<head.data) {
+            temp.next=head;
+            return temp;
+        }
+        Node cur=head;
+        while(cur.next!=null && cur.next.data<data){
+            cur=cur.next;
+        }
+        temp.next=cur.next;
+        cur.next=temp;
+        return head;
+      
+    }
