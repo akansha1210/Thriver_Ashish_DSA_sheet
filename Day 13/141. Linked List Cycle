@@ -1,1 +1,15 @@
+//Method one by changing refernces of each node
+//by this method you can only detect the loop and you'll loose the linked list as all node will point to dummy node in this method
+public boolean hasCycle(ListNode head) {
+        ListNode temp=new ListNode(0);//temporary node
+        ListNode curr=head;
+        while(curr!=null){
+            if(curr.next==null) return false;
+            if(curr.next==temp) return true; //if current node next is already pointing to the temp node
+            ListNode next=curr.next;
+            curr.next=temp;//pointing current's next to temp node
+            curr=next;
 
+        }
+        return false;
+    }
