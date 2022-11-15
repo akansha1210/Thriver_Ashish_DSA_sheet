@@ -1,4 +1,4 @@
-//Method one by changing refernces of each node
+//Method 1 by changing refernces of each node
 //by this method you can only detect the loop and you'll loose the linked list as all node will point to dummy node in this method
 public boolean hasCycle(ListNode head) {
         ListNode temp=new ListNode(0);//temporary node
@@ -10,6 +10,21 @@ public boolean hasCycle(ListNode head) {
             curr.next=temp;//pointing current's next to temp node
             curr=next;
 
+        }
+        return false;
+    }
+    
+    
+    
+    
+    
+//Method 2 by hashing
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        HashSet<ListNode> hs=new HashSet<ListNode>();
+        for(ListNode curr=head;curr!=null;curr=curr.next){
+            if(hs.contains(curr)) return true;
+            hs.add(curr);
         }
         return false;
     }
