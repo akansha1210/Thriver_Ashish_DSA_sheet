@@ -1,0 +1,26 @@
+//HASHING
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        HashSet<ListNode> hs=new HashSet<>();
+        for(ListNode curr=headA;curr!=null;curr=curr.next){
+            hs.add(curr);
+        }
+        for(ListNode curr=headB;curr!=null;curr=curr.next){
+            if(hs.contains(curr)) return curr;
+            
+        }
+        return null;
+    }
+}
+//Most Optimal Approach with easy code
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode a=headA;
+        ListNode b=headB;
+        while(a!=b){
+            a=(a==null)?headB:a.next; //Ternary operator
+            b=(b==null)?headA:b.next;
+        }
+        return a;
+    }
+}
