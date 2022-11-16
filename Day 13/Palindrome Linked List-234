@@ -1,1 +1,13 @@
-
+//NAIVE APPROACh
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+      Stack<Integer>st=new Stack<>();
+      for(ListNode curr=head;curr!=null;curr=curr.next){
+          st.push(curr.val);
+      }
+      for(ListNode curr=head;curr!=null;curr=curr.next){
+          if(st.pop()!=curr.val) return false;
+      }
+        return true;
+    }
+}
