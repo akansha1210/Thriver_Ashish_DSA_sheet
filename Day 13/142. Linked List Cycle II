@@ -1,0 +1,10 @@
+public class Solution {
+    public ListNode detectCycle(ListNode head) {
+        HashSet<ListNode> hs=new HashSet<ListNode>();
+        for(ListNode cur=head;cur!=null;cur=cur.next){
+            if(hs.contains(cur)) return cur;
+            hs.add(cur);
+        }
+        return null;
+    }
+}
