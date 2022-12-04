@@ -1,5 +1,5 @@
 Comparison of Time Complexities
-Big O Notation
+Big-O Notation
 O(1)	
 O(log n)	
 O(n)
