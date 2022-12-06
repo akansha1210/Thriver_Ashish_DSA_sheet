@@ -10,6 +10,5 @@ O(2^n)
 O(n!)	
 (increases from top to down)
 
-
 HOW TO AVOID TLE-
 10^8 operation rule - Most of the modern machine can perform 10^8 operation/second.
