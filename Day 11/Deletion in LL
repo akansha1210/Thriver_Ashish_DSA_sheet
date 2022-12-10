@@ -1,6 +1,5 @@
 Node deleteHead(Node head)
     {
-        // Your code here   
         if(head==null) return null;
         else return head.next;
     }
