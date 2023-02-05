@@ -1,4 +1,5 @@
 //Naive Approach
+//using extra space and changing data of node
    public ListNode reverseList(ListNode head) {
         ArrayList<Integer>ar=new ArrayList<>();
         for(ListNode curr=head;curr!=null;curr=curr.next){
