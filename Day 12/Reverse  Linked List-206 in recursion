@@ -1,0 +1,11 @@
+/*we assuming that our head is already reversed that's why we re calling reverse function from head.next*/
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        if(head==null||head.next==null) return head;
+        ListNode newHead=reverseList(head.next);/*we leave it to recursive leap of faith that it will reverse the linked list and will return the pointer to last node which is basically our new head*/
+        ListNode headNext=head.next;
+        headNext.next=head;
+        head.next=null;
+        return newHead;
+    }
+}
