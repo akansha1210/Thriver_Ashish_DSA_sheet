@@ -9,3 +9,4 @@ class Solution {
         return newHead;
     }
 }
+very easy if you know recursion
